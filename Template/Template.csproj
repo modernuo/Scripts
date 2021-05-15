@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Server</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ModernUO\Projects\Server\Server.csproj" />
+    <ProjectReference Include="..\ModernUO\Projects\UOContent\UOContent.csproj" />
+  </ItemGroup>
+
+</Project>
