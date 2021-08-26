@@ -1,5 +1,5 @@
-# ServUO-for-ModernUO
-A repository of scripts adapted from ServUO to work as drop-ins for ModernUO
+# Scripts
+A repository of scripts for ModernUO
 
 ### Creating a drop-in script
 1. Make a copy of the template folder with the name of the feature/script.
@@ -7,23 +7,17 @@ A repository of scripts adapted from ServUO to work as drop-ins for ModernUO
 1. Open `Visual Studio` or `Rider` and add an existing project. Choose the new csproj file you just renamed.
 1. Start building the code!
 
-### Using a drop-in script
-1. In your ModernUO repository create a `git submodule` to this repository.
-1. Add the drop-in script's `csproj` file as an `Existing Project` to your ModernUO solution.
-1. In your ModernUO repository modify `Distribution/Data/assemblies.json` to include the name of the compiled dll file for the script.
-   * Note: The name of the file is usually the same name as the project.
-
 ### Submitting your drop-in
-1. [Fork](https://github.com/modernuo/ServUO-for-ModernUO/fork) this repository.
+1. [Fork](https://github.com/modernuo/Scripts/fork) this repository.
 1. Create your drop-in script on a branch.
 1. Push the branch and changes to your fork.
 1. Make sure you update the MODIFICATIONS file.
    * Join our [Discord](https://discord.gg/DHkNUsq) and ask for help if you are unsure.
-1. Submit a [Pull Request](https://github.com/modernuo/ServUO-for-ModernUO/pulls)
+1. Submit a [Pull Request](https://github.com/modernuo/Scripts/pulls)
 
 
 ### Tracking changes (GPL compliance)
-If your drop-in makes modifications to a `ServUO` file or another project that requires tracking changes
+If your drop-in makes modifications to a `ServUO` or `ModernUO` file or another project that requires tracking changes
 then you will need to create a `MODIFICATIONS` file. See the modifications file in the `Template` project as an example.
 
 This uses the following format:
