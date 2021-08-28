@@ -1,8 +1,12 @@
 # Scripts
 A repository of scripts for ModernUO
 
+### Getting Started
+1. Clone this repository
+1. Run `git submodule update --init`
+
 ### Creating a drop-in script
-1. Make a copy of the template folder with the name of the feature/script.
+1. Make a copy of the `Scripts\Template` folder and name it the name of your feature.
 1. Rename `Template.csproj` in your new folder to the same name as the folder.
 1. Open `Visual Studio` or `Rider` and add an existing project. Choose the new csproj file you just renamed.
 1. Start building the code!
