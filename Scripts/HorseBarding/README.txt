@@ -2,7 +2,7 @@ Horse Barding
 
 Credit goes to Elkaiozen.
 
-Converted for use by ModernUO server by Arthrutus.
+Converted for use by ModernUO server by Arthrutus/kamronbatman.
 
 Note: You may notice that the menu featuring horse barding deed is imperfect. 
 In DefBlacksmithy, one may want to change "horse barding deed" to a cliloc number.
