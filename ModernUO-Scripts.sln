@@ -6,6 +6,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "ModernUO\Projects
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UOContent", "ModernUO\Projects\UOContent\UOContent.csproj", "{7F3583E2-D309-48AA-BC7A-6E16663AB8F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializationGenerator", "ModernUO\Projects\SerializationGenerator\SerializationGenerator.csproj", "{6F2D6C58-04BE-4119-A100-6EB91AFF249D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializationSchemaGenerator", "ModernUO\Projects\SerializationSchemaGenerator\SerializationSchemaGenerator.csproj", "{95D52EEF-BBA5-4446-869B-B4620887D12D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{7F3583E2-D309-48AA-BC7A-6E16663AB8F2}.Debug|Any CPU.Build.0 = Debug|x64
 		{7F3583E2-D309-48AA-BC7A-6E16663AB8F2}.Release|Any CPU.ActiveCfg = Release|x64
 		{7F3583E2-D309-48AA-BC7A-6E16663AB8F2}.Release|Any CPU.Build.0 = Release|x64
+		{6F2D6C58-04BE-4119-A100-6EB91AFF249D}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{6F2D6C58-04BE-4119-A100-6EB91AFF249D}.Debug|Any CPU.Build.0 = Debug|x64
+		{6F2D6C58-04BE-4119-A100-6EB91AFF249D}.Release|Any CPU.ActiveCfg = Release|x64
+		{6F2D6C58-04BE-4119-A100-6EB91AFF249D}.Release|Any CPU.Build.0 = Release|x64
+		{95D52EEF-BBA5-4446-869B-B4620887D12D}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{95D52EEF-BBA5-4446-869B-B4620887D12D}.Debug|Any CPU.Build.0 = Debug|x64
+		{95D52EEF-BBA5-4446-869B-B4620887D12D}.Release|Any CPU.ActiveCfg = Release|x64
+		{95D52EEF-BBA5-4446-869B-B4620887D12D}.Release|Any CPU.Build.0 = Release|x64
 	EndGlobalSection
 EndGlobal
