@@ -15,7 +15,6 @@ namespace Server.Items
             Hue = hue;
             Weight = 1.0;
             LootType = LootType.Blessed;
-            Visible = false;
         }
 
         public override void OnDoubleClick(Mobile from)

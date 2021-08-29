@@ -11,7 +11,7 @@ namespace Server.Items
         [SerializableFieldAttr("[CommandProperty(AccessLevel.GameMaster)]")]
         private int _effectSound = 0x228;
 
-        [SerializableField(1)]
+        [SerializableField(2)]
         [SerializableFieldAttr("[CommandProperty(AccessLevel.GameMaster)]")]
         private int _effectId = 0x3728;
 
@@ -39,7 +39,7 @@ namespace Server.Items
         }
 
         [Constructible]
-        public SmokeHide() : base(2119)
+        public SmokeHide() : base(1153)
         {
         }
     }

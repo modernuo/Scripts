@@ -1,9 +1,9 @@
 namespace Server.Items
 {
     [Serializable(0)]
-    public partial class ThunderHide : BaseStaffHide
+    public partial class LightningHide : BaseStaffHide
     {
-        public override string DefaultName => "Lighting Bolt Hide";
+        public override string DefaultName => "Lighting Hide";
 
         public override bool CastHide => false;
 
@@ -15,7 +15,7 @@ namespace Server.Items
         }
 
         [Constructible]
-        public ThunderHide() : base(1153)
+        public LightningHide() : base(1000)
         {
         }
     }
