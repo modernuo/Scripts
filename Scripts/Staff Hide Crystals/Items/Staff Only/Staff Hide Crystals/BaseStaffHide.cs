@@ -1,4 +1,5 @@
 using System;
+using Server.Network;
 using Server.Spells;
 
 namespace Server.Items
@@ -6,6 +7,8 @@ namespace Server.Items
     [Serializable(0)]
     public abstract partial class BaseStaffHide : Item
     {
+        public override string DefaultName => "Hide Crystal";
+
         public virtual bool CastHide => false;
         public virtual bool CastArea => false;
 
@@ -37,11 +40,9 @@ namespace Server.Items
             }
         }
 
-        public override void GetProperties(ObjectPropertyList list)
+        public override void AddNameProperty(ObjectPropertyList list)
         {
-            base.GetProperties(list);
-
-            list.Add("(Staff Only)");
+            list.Add(1050039, $"{Name}\t(Staff Only)");
         }
 
         public virtual void HideEffects(Mobile from)
@@ -53,6 +54,18 @@ namespace Server.Items
         {
             from.EndAction<BaseStaffHide>();
         }
+
+        public override void SendWorldPacketTo(NetState ns, ReadOnlySpan<byte> world = default)
+        {
+            // Only staff can see them
+            if (CanSeeStaffOnly(ns.Mobile))
+            {
+                base.SendWorldPacketTo(ns, world);
+            }
+        }
+
+        // Allow counselors to interact with the crystals
+        public override bool CanSeeStaffOnly(Mobile m) => m.AccessLevel > AccessLevel.Player;
 
         public override bool IsAccessibleTo(Mobile from) => from.AccessLevel >= AccessLevel.GameMaster;
 
