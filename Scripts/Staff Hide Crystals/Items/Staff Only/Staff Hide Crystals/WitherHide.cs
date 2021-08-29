@@ -3,7 +3,7 @@ namespace Server.Items
     [Serializable(0)]
     public partial class WitherHide : BaseStaffHide
     {
-        public override string DefaultName => "Gate Hide";
+        public override string DefaultName => "Whither Hide";
 
         public override bool CastHide => false;
 
@@ -26,7 +26,7 @@ namespace Server.Items
         }
 
         [Constructible]
-        public WitherHide() : base(1152)
+        public WitherHide() : base(1156)
         {
         }
     }

@@ -17,6 +17,14 @@
       "ruleArguments": [
         ""
       ]
+    },
+    {
+      "name": "EffectId",
+      "type": "int",
+      "rule": "PrimitiveTypeMigrationRule",
+      "ruleArguments": [
+        ""
+      ]
     }
   ]
 }

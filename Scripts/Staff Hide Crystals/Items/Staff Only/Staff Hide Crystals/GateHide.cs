@@ -25,9 +25,9 @@ namespace Server.Items
         {
             var worldLocation = new WorldLocation(from.Location, from.Map);
 
-            var redGate = _redGate ? 0x1AE5 : 0x1AF3;
+            var gateItemId = _redGate ? 0x1AE5 : 0x1AF3;
             var gateHue = _gateHue > 0 ? _gateHue - 1 : 0;
-            Effects.SendLocationParticles(from, redGate, 8, 26, gateHue, 0, 0, 0);
+            Effects.SendLocationParticles(from, gateItemId, 8, 28, gateHue, 0, 0, 0);
             Effects.PlaySound(from, _gateSound);
             Timer.StartTimer(TimeSpan.FromSeconds(1.25), () => PlaceGate(from, worldLocation));
         }
@@ -37,7 +37,8 @@ namespace Server.Items
             var itemId = _redGate ? 0xDDA : 0xF6C;
             var hue = _gateHue > 0 ? _gateHue : 0;
 
-            var moongate = new StaffHideMoongate(itemId, hue, worldLocation.Location, worldLocation.Map);
+            var moongate = new StaffHideMoongate(itemId, hue);
+            moongate.MoveToWorld(worldLocation);
 
             Timer.StartTimer(TimeSpan.FromSeconds(1.0) , () => from.Hidden = !from.Hidden);
             Timer.StartTimer(TimeSpan.FromSeconds(3.0), () => KillGate(moongate));
@@ -55,7 +56,7 @@ namespace Server.Items
         }
 
         [Constructible]
-        public GateHide() : base(1154)
+        public GateHide() : base(1152)
         {
             _gateSound = 496;
             _gateHue = 0;
@@ -64,7 +65,7 @@ namespace Server.Items
         [Serializable(0)]
         private partial class StaffHideMoongate : Moongate
         {
-            public StaffHideMoongate(int itemId, int hue, Point3D loc, Map map) : base(loc, map, false)
+            public StaffHideMoongate(int itemId, int hue) : base(false)
             {
                 ItemID = itemId;
                 Hue = hue;

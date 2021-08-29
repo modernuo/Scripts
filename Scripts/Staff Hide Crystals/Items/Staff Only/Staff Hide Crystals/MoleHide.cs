@@ -7,11 +7,13 @@ namespace Server.Items
     {
         private class MoleInfo
         {
-            public Mobile _from;
+            public readonly Mobile _from;
             public int _count;
 
             public MoleInfo(Mobile from) => _from = from;
         }
+
+        public override string DefaultName => "Mole Hide";
 
         public override bool CastHide => false;
 
@@ -41,14 +43,14 @@ namespace Server.Items
             info._count++;
             if (info._count > 9)
             {
-                info._from.EndAction(typeof(MoleHide));
+                OnEndHideEffects(info._from);
             }
         }
 
         private void DoDecZ_Callback(MoleInfo info)
         {
 
-            info._from.Z++;
+            info._from.Z--;
             info._count++;
             if (info._count > 9)
             {
