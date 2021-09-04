@@ -170,10 +170,10 @@ namespace Server
             {
                 SwampDragon pet = m.Mount as SwampDragon;
 
-                if (pet != null && pet.HasBarding)
+                if (pet.HasBarding)
                 {
-                    int percent = (pet.BardingExceptional ? 20 : 10);
-                    int absorbed = Scale(totalDamage, percent);
+                    var percent = pet.BardingExceptional ? 20 : 10;
+                    var absorbed = Scale(totalDamage, percent);
 
                     totalDamage -= absorbed;
                     pet.BardingHP -= absorbed;
@@ -191,11 +191,10 @@ namespace Server
             if ((!Core.AOS || from == null || !from.Player) && m.Player && m.Mount is Horse)
             {
                 Horse pet = m.Mount as Horse;
-
-                if (pet != null && pet.HasBarding)
+                if (pet.HasBarding)
                 {
-                    int percent = (pet.BardingExceptional ? 20 : 10);
-                    int absorbed = Scale(totalDamage, percent);
+                    var percent = pet.BardingExceptional ? 20 : 10;
+                    var absorbed = Scale(totalDamage, percent);
 
                     totalDamage -= absorbed;
                     pet.BardingHP -= absorbed;
@@ -205,7 +204,7 @@ namespace Server
                         pet.HasBarding = false;
                         pet.BardingHP = 0;
 
-                        m.SendMessage("Your horses barding has been destroyed."); // Your dragon's barding has been destroyed!
+                        m.SendMessage("Your horse's barding has been destroyed."); // Your horse's barding has been destroyed!
                     }
                 }
             }
@@ -1553,3 +1552,4 @@ namespace Server
         }
     }
 }
+
