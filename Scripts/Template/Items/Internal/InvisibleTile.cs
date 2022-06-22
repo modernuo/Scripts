@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Buffers.Binary;
+using ModernUO.Serialization;
 using Server.Network;
 
 namespace Server.Items
 {
-    [Serializable(0)]
+    [SerializationGenerator(0)]
     public partial class InvisibleTile : Item
     {
         private const ushort _gmItemId = 0x36FF;

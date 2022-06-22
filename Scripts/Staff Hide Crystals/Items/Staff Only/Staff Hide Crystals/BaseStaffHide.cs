@@ -1,10 +1,11 @@
 using System;
+using ModernUO.Serialization;
 using Server.Network;
 using Server.Spells;
 
 namespace Server.Items
 {
-    [Serializable(0)]
+    [SerializationGenerator(0)]
     public abstract partial class BaseStaffHide : Item
     {
         public override string DefaultName => "Hide Crystal";
@@ -40,7 +41,7 @@ namespace Server.Items
             }
         }
 
-        public override void AddNameProperty(ObjectPropertyList list)
+        public override void AddNameProperty(IPropertyList list)
         {
             list.Add(1050039, $"{Name}\t(Staff Only)");
         }
