@@ -1,13 +1,14 @@
 using System;
+using ModernUO.Serialization;
 
 namespace Server.Items
 {
-    [Serializable(0)]
+    [SerializationGenerator(0)]
     public partial class GateHide : BaseStaffHide
     {
         [SerializableField(1)]
         [SerializableFieldAttr("[CommandProperty(AccessLevel.GameMaster)]")]
-        private bool _redGate;
+        private bool _redGate = false;
 
         [SerializableField(2)]
         [SerializableFieldAttr("[CommandProperty(AccessLevel.GameMaster)]")]
@@ -62,7 +63,7 @@ namespace Server.Items
             _gateHue = 0;
         }
 
-        [Serializable(0)]
+        [SerializationGenerator(0)]
         private partial class StaffHideMoongate : Moongate
         {
             public StaffHideMoongate(int itemId, int hue) : base(false)

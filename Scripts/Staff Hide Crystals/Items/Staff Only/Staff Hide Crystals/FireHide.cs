@@ -1,11 +1,13 @@
+using ModernUO.Serialization;
+
 namespace Server.Items
 {
-    [Serializable(0)]
+    [SerializationGenerator(0)]
     public partial class FireHide : BaseStaffHide
     {
         [SerializableField(0)]
         [SerializableFieldAttr("[CommandProperty(AccessLevel.GameMaster)]")]
-        private int _effectHue;
+        private int _effectHue = 0;
 
         [SerializableField(1)]
         [SerializableFieldAttr("[CommandProperty(AccessLevel.GameMaster)]")]
@@ -17,7 +19,7 @@ namespace Server.Items
 
         [SerializableField(3)]
         [SerializableFieldAttr("[CommandProperty(AccessLevel.GameMaster)]")]
-        private int _effectRender;
+        private int _effectRender = 0;
 
         [SerializableField(4)]
         [SerializableFieldAttr("[CommandProperty(AccessLevel.GameMaster)]")]

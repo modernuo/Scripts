@@ -1,6 +1,8 @@
+using ModernUO.Serialization;
+
 namespace Server.Items
 {
-    [Serializable(0)]
+    [SerializationGenerator(0)]
     public partial class ExplosionHide : BaseStaffHide
     {
         public override bool CastHide => false;

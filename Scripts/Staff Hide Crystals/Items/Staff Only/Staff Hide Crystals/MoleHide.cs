@@ -1,8 +1,9 @@
 using System;
+using ModernUO.Serialization;
 
 namespace Server.Items
 {
-    [Serializable(0)]
+    [SerializationGenerator(0)]
     public partial class MoleHide : BaseStaffHide
     {
         private class MoleInfo
